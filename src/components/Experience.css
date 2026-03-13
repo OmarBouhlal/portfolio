@@ -1,0 +1,104 @@
+/* ============================================================
+   Experience Section Styles
+   ============================================================ */
+
+.experience {
+    border-top: 1px solid var(--color-border);
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.experience-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    user-select: none;
+    transition: color var(--transition-fast);
+    width: 100%;
+    text-align: left;
+    color: var(--color-text-primary);
+}
+
+.experience-header:hover {
+    color: var(--color-accent);
+}
+
+.experience-company {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.experience-toggle {
+    font-size: var(--text-xl);
+    color: var(--color-text-tertiary);
+    transition: transform var(--transition-base), color var(--transition-fast);
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.experience-toggle.open {
+    transform: rotate(45deg);
+}
+
+.experience-header:hover .experience-toggle {
+    color: var(--color-accent);
+}
+
+.experience-roles {
+    overflow: hidden;
+}
+
+.experience-role {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0.625rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-border);
+    margin-left: 0.25rem;
+}
+
+.experience-role:last-child {
+    padding-bottom: 1.25rem;
+}
+
+.experience-role-title {
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+.experience-role-dates {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    font-family: var(--font-mono);
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+@media (max-width: 600px) {
+    .experience-role {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .experience-role-dates {
+        margin-left: 0;
+        font-size: var(--text-xs);
+    }
+}

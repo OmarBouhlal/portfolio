@@ -1,0 +1,154 @@
+%-------------------------
+% CV Conforme ATS — Omar Bouhlal (Français)
+% Utilise uniquement du LaTeX standard — compatibilité ATS maximale
+%-------------------------
+\documentclass[a4paper,11pt]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[inline]{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[french]{babel}
+
+% --- Colors ---
+\definecolor{accent}{HTML}{2563EB}
+\definecolor{darktext}{HTML}{1f2937}
+\definecolor{lighttext}{HTML}{6b7280}
+
+% --- Hyperlinks ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdfauthor={Omar Bouhlal},
+    pdftitle={Omar Bouhlal - CV},
+}
+
+% --- Section Formatting ---
+\titleformat{\section}
+  {\large\bfseries\color{darktext}\uppercase}
+  {}{0em}{}
+  [\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+% --- No page numbers ---
+\pagestyle{empty}
+
+% --- Custom commands ---
+\newcommand{\entryhead}[3]{%
+  \textbf{#1} \hfill \textit{#2} \\
+  \textit{#3}
+}
+
+\begin{document}
+
+% ============================================================
+% EN-TÊTE
+% ============================================================
+\begin{center}
+  {\LARGE\bfseries Omar Bouhlal} \\[2pt]
+  {\color{lighttext} Meknès, Maroc} \\[2pt]
+  omarbouhlal05@gmail.com
+  \quad $\cdot$ \quad +212 766 678 608 \\[2pt]
+  linkedin.com/in/omar-bouhlal-101ba6353
+  \quad $\cdot$ \quad
+  github.com/OmarBouhlal
+\end{center}
+
+\vspace{-10pt}
+
+
+
+% ============================================================
+% FORMATION
+% ============================================================
+\section{Formation}
+
+\entryhead{ENSAM Meknès — École Nationale Supérieure d'Arts et Métiers}{2022 -- Présent}{Diplôme d'Ingénieur en Génie Logiciel et Systèmes Intelligents (4ème année)}
+
+\vspace{2pt}
+
+\entryhead{Groupe Scolaire Atlas — Rabat}{2021 -- 2022}{2ème Année Baccalauréat Sciences Physiques — Mention Très Bien}
+
+\vspace{2pt}
+
+\entryhead{Groupe Scolaire Atlas — Rabat}{2020 -- 2021}{1ère Année Baccalauréat Sciences Expérimentales — Mention Très Bien}
+
+% ============================================================
+% EXPÉRIENCE PROFESSIONNELLE
+% ============================================================
+\section{Expérience Professionnelle}
+
+\entryhead{ECS Informatique}{2024 · 1 mois}{Stagiaire en Ingénierie Logicielle}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt]
+  \item Développement d'une application web d'entreprise pour la gestion et le suivi multicritère des frais professionnels des employés
+  \item Conception et implémentation de formulaires dynamiques, contrôle d'accès par rôles et tableaux de bord de reporting
+  \item Collaboration en équipe sur la conception de l'architecture de la base de données et des API REST
+  \item Technologies : ASP.NET, C\#, .NET Framework, SQL Server
+\end{itemize}
+
+% ============================================================
+% PROJETS
+% ============================================================
+\section{Projets}
+
+\textbf{ENSAM360 — Visite Virtuelle Immersive 360°} \\
+\textit{React, Node.js, Neo4j, Groq AI, Docker}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt]
+  \item Conception d'une plateforme de visite virtuelle permettant la navigation numérique du campus de l'ENSAM Meknès
+  \item Intégration d'un chatbot alimenté par l'IA pour assister les visiteurs durant leur expérience de visite
+  \item Architecture micro-services orchestrée via Docker Compose
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{XPFit — Application Mobile de Fitness} \\
+\textit{Flutter, Dart, SQLite, Google AI, Spoonacular API}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt]
+  \item Développement d'une application mobile multiplateforme avec suivi d'exercices gamifié et système d'évolution physique
+  \item Implémentation de plans de repas hebdomadaires avec guide nutritionnel via l'API Spoonacular
+  \item Intégration d'un chatbot IA utilisant Google Generative AI pour des conseils fitness personnalisés
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Jeu d'Échecs — Pixel Art 2D} \\
+\textit{Godot Engine, GDScript, LibreSprite}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt]
+  \item Création d'un jeu d'échecs 2D entièrement jouable à partir de zéro avec le moteur Godot
+  \item Réalisation de tous les sprites des pièces en pixel art avec LibreSprite
+\end{itemize}
+
+% ============================================================
+% COMPÉTENCES TECHNIQUES
+% ============================================================
+\section{Compétences Techniques}
+
+\textbf{Langages :} Java, C\#, Dart, GDScript, JavaScript, Python, C++ \\
+\textbf{Frameworks :} Spring Boot, ASP.NET / .NET, Flutter, React, Node.js \\
+\textbf{Bases de données :} SQL Server, SQLite, Neo4j \\
+\textbf{Outils et Plateformes :} Git, Docker, Godot Engine, LibreSprite \\
+\textbf{Concepts :} Microservices, API REST, Architecture Logicielle, Design Patterns
+
+% ============================================================
+% CERTIFICATIONS
+% ============================================================
+\section{Certifications}
+
+\textbf{Oracle Cloud Infrastructure (OCI)} \hfill Oracle
+
+% ============================================================
+% LANGUES
+% ============================================================
+\section{Langues}
+
+\textbf{Arabe} — Langue maternelle \quad $\cdot$ \quad
+\textbf{Français} — Courant \quad $\cdot$ \quad
+\textbf{Anglais} — Courant
+
+\end{document}

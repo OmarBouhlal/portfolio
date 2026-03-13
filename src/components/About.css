@@ -1,0 +1,32 @@
+/* ============================================================
+   About Section Styles
+   ============================================================ */
+
+.about {
+    border-top: 1px solid var(--color-border);
+}
+
+.about-text {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+.about-text p {
+    margin-bottom: 1.25rem;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-text a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+.about-text a:hover {
+    color: var(--color-accent-hover);
+}

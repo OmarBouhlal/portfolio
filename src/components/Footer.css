@@ -1,0 +1,25 @@
+/* ============================================================
+   Footer Styles
+   ============================================================ */
+
+.footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem 0;
+}
+
+.footer-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--container-padding);
+    text-align: center;
+}
+
+.footer-text {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+.footer-text span {
+    margin: 0 0.35rem;
+    color: var(--color-text-tertiary);
+}

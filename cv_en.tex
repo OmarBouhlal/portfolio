@@ -1,0 +1,153 @@
+%-------------------------
+% ATS-Compliant CV — Omar Bouhlal (English)
+% Uses only standard LaTeX — maximum ATS compatibility
+%-------------------------
+\documentclass[a4paper,11pt]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[inline]{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% --- Colors ---
+\definecolor{accent}{HTML}{2563EB}
+\definecolor{darktext}{HTML}{1f2937}
+\definecolor{lighttext}{HTML}{6b7280}
+
+% --- Hyperlinks ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdfauthor={Omar Bouhlal},
+    pdftitle={Omar Bouhlal - CV},
+}
+
+% --- Section Formatting ---
+\titleformat{\section}
+  {\large\bfseries\color{darktext}\uppercase}
+  {}{0em}{}
+  [\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+% --- No page numbers ---
+\pagestyle{empty}
+
+% --- Custom commands ---
+\newcommand{\entryhead}[3]{%
+  \textbf{#1} \hfill \textit{#2} \\
+  \textit{#3}
+}
+
+\begin{document}
+
+% ============================================================
+% HEADER
+% ============================================================
+\begin{center}
+  {\LARGE\bfseries Omar Bouhlal} \\[2pt]
+  {\color{lighttext} Meknès, Morocco} \\[2pt]
+  omarbouhlal05@gmail.com
+  \quad $\cdot$ \quad +212 766 678 608 \\[2pt]
+  linkedin.com/in/omar-bouhlal-101ba6353
+  \quad $\cdot$ \quad
+  github.com/OmarBouhlal
+\end{center}
+
+\vspace{-10pt}
+
+
+
+% ============================================================
+% EDUCATION
+% ============================================================
+\section{Education}
+
+\entryhead{National School of Arts and Crafts Meknès (ENSAM Meknès)}{2022 -- Present}{Engineering Degree in Software \& Intelligent Systems (4th Year)}
+
+\vspace{2pt}
+
+\entryhead{Groupe Scolaire Atlas — Rabat}{2021 -- 2022}{2nd Year Baccalauréat in Physical Sciences — Mention Très Bien}
+
+\vspace{2pt}
+
+\entryhead{Groupe Scolaire Atlas — Rabat}{2020 -- 2021}{1st Year Baccalauréat in Experimental Sciences — Mention Très Bien}
+
+% ============================================================
+% EXPERIENCE
+% ============================================================
+\section{Professional Experience}
+
+\entryhead{ECS Informatique}{2024 · 1 month}{Software Engineering Intern}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt]
+  \item Developed an enterprise web application for managing multi-criteria employee expense tracking and approval processes
+  \item Designed and implemented dynamic forms, role-based access control, and reporting dashboards
+  \item Collaborated with a team member on database schema design and RESTful API architecture
+  \item Technologies: ASP.NET, C\#, .NET Framework, SQL Server
+\end{itemize}
+
+% ============================================================
+% PROJECTS
+% ============================================================
+\section{Projects}
+
+\textbf{ENSAM360 — Immersive 360° Virtual Tour} \\
+\textit{React, Node.js, Neo4j, Groq AI, Docker}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt]
+  \item Built a virtual tour platform enabling digital navigation of the ENSAM Meknès campus
+  \item Integrated an AI-powered chatbot to assist visitors during their virtual tour experience
+  \item Designed micro-services architecture orchestrated via Docker Compose
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{XPFit — Mobile Fitness Application} \\
+\textit{Flutter, Dart, SQLite, Google AI, Spoonacular API}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt]
+  \item Developed a cross-platform mobile app with gamified exercise tracking and physical evolution system
+  \item Implemented weekly meal planning with nutrition guidance powered by Spoonacular API
+  \item Integrated an AI chatbot using Google Generative AI for personalized fitness advice
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Chess Game — 2D Pixel Art} \\
+\textit{Godot Engine, GDScript, LibreSprite}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt]
+  \item Built a fully playable 2D chess game from scratch using the Godot game engine
+  \item Hand-crafted all chess piece sprites as pixel art using LibreSprite
+\end{itemize}
+
+% ============================================================
+% TECHNICAL SKILLS
+% ============================================================
+\section{Technical Skills}
+
+\textbf{Languages:} Java, C\#, Dart, GDScript, JavaScript, Python, C++ \\
+\textbf{Frameworks:} Spring Boot, ASP.NET / .NET, Flutter, React, Node.js \\
+\textbf{Databases:} SQL Server, SQLite, Neo4j \\
+\textbf{Tools \& Platforms:} Git, Docker, Godot Engine, LibreSprite \\
+\textbf{Concepts:} Microservices, REST APIs, Software Architecture, Design Patterns
+
+% ============================================================
+% CERTIFICATIONS
+% ============================================================
+\section{Certifications}
+
+\textbf{Oracle Cloud Infrastructure (OCI)} \hfill Oracle
+
+% ============================================================
+% LANGUAGES
+% ============================================================
+\section{Languages}
+
+\textbf{Arabic} — Native \quad $\cdot$ \quad
+\textbf{French} — Proficient \quad $\cdot$ \quad
+\textbf{English} — Proficient
+
+\end{document}
