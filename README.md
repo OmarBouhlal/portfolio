@@ -1,73 +1,35 @@
-# React + TypeScript + Vite
+# Omar Bouhlal — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional portfolio of Omar Bouhlal, a Software & Intelligent Systems Engineering student at ENSAM Meknès.
 
-Currently, two official plugins are available:
+## 🚀 About Me
+I'm a 4th-year engineering student specializing in Software & Intelligent Systems. I'm passionate about backend development, software architecture, and game development. Currently seeking a backend developer internship for Summer 2026.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Technical Skills
+- **Languages:** Java, C#, Dart, GDScript, JavaScript, Python, C++
+- **Frameworks:** Spring Boot, ASP.NET / .NET, Flutter, React, Node.js
+- **Databases:** SQL Server, SQLite, Neo4j
+- **Tools:** Git, Docker, Godot Engine, LibreSprite
+- **Concepts:** Microservices, REST APIs, Software Architecture, Design Patterns
 
-## React Compiler
+## 📂 Featured Projects
+- **ENSAM360:** Immersive 360° virtual tour for ENSAM Meknès campus with AI chatbot integration.
+- **XPFit:** Mobile fitness app with gamified tracking and AI-powered nutrition guidance.
+- **ECS Expense Management System:** Enterprise web application for multi-criteria employee expense tracking.
+- **Chess Game:** 2D pixel art chess game built with Godot Engine.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎓 Education
+- **Engineering Degree in Software & Intelligent Systems** — National School of Arts and Crafts Meknès (ENSAM) (2022 - Present)
+- **Baccalauréat in Physical Sciences** — Groupe Scolaire Atlas, Rabat (2021 - 2022)
+- **1st Year Baccalauréat in Experimental Sciences** — Groupe Scolaire Atlas, Rabat (2020 - 2021)
 
-## Expanding the ESLint configuration
+## 📜 Certifications
+- **Oracle Cloud Infrastructure (OCI)**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📬 Contact
+- **Email:** [omarbouhlal05@gmail.com](mailto:omarbouhlal05@gmail.com)
+- **LinkedIn:** [linkedin.com/in/omar-bouhlal-101ba6353](https://www.linkedin.com/in/omar-bouhlal-101ba6353)
+- **GitHub:** [github.com/OmarBouhlal](https://github.com/OmarBouhlal)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+Built with React, TypeScript, and Vite.
