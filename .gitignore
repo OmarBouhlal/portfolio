@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# CV and LaTeX
+cv/
+*.aux
+*.fdb_latexmk
+*.fls
+*.gz
+*.out
+*.toc
+*.synctex.gz
+*.pdf
+!public/*.pdf

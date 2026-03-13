@@ -44,6 +44,19 @@ export default function Hero() {
                     </motion.p>
                     <div className="hero-actions">
                         <motion.a
+                            href={personalInfo.resumeUrl}
+                            className="hero-cta secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.8 }}
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.97 }}
+                        >
+                            Download CV
+                        </motion.a>
+                        <motion.a
                             href="#contact"
                             className="hero-cta"
                             initial={{ opacity: 0, y: 20 }}

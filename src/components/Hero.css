@@ -153,6 +153,20 @@
     box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
 }
 
+.hero-cta.secondary {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    box-shadow: none;
+}
+
+.hero-cta.secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
 .hero-cta svg {
     transition: transform var(--transition-fast);
 }
