@@ -85,7 +85,7 @@ export default function Hero() {
                 >
                     <div className="hero-avatar-ring" />
                     <img
-                        src="/me.jpeg"
+                        src="me.jpeg"
                         alt="Omar Bouhlal"
                         className="hero-avatar"
                     />
