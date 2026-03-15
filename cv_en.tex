@@ -10,7 +10,10 @@
 \usepackage{lmodern}
 \usepackage[margin=0.5in]{geometry}
 \usepackage[inline]{enumitem}
-\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
 \usepackage{xcolor}
 
@@ -33,7 +36,7 @@
   {\large\bfseries\color{darktext}\uppercase}
   {}{0em}{}
   [\titlerule]
-\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
 
 % --- No page numbers ---
 \pagestyle{empty}
@@ -49,46 +52,53 @@
 % ============================================================
 % HEADER
 % ============================================================
-\begin{center}
-  {\LARGE\bfseries Omar Bouhlal} \\[2pt]
+\begin{minipage}[t]{0.74\textwidth}
+  {\LARGE\bfseries Omar Bouhlal} \\[4pt]
   {\color{lighttext} Meknès, Morocco} \\[2pt]
-  omarbouhlal05@gmail.com
-  \quad $\cdot$ \quad +212 766 678 608 \\[2pt]
-  linkedin.com/in/omar-bouhlal-101ba6353
-  \quad $\cdot$ \quad
-  github.com/OmarBouhlal
-\end{center}
+  omarbouhlal05@gmail.com \quad $\cdot$ \quad +212 766 678 608 \\[2pt]
+  linkedin.com/in/omar-bouhlal-101ba6353 \quad $\cdot$ \quad github.com/OmarBouhlal
+\end{minipage}
+\begin{minipage}[t]{0.25\textwidth}
+  \raggedleft
+  \vspace{-15pt}
+  \begin{tikzpicture}
+    \draw[draw=none] (0,0) rectangle (2.5cm,2.5cm);
+    \node[inner sep=0pt] at (1.25cm,1.25cm) {\includegraphics[width=2.5cm]{pic_cv.jpeg}};
+  \end{tikzpicture}
+\end{minipage}
 
 \vspace{-10pt}
 
-
+% ============================================================
+% SUMMARY
+% ============================================================
+\section{Summary}
+4th-year Software \& Intelligent Systems Engineering student at ENSAM Meknès. Passionate about backend development, software architecture, and the underlying logic of complex systems. Occasional game developer exploring mechanics and design.
 
 % ============================================================
 % EDUCATION
 % ============================================================
 \section{Education}
 
-\entryhead{National School of Arts and Crafts Meknès (ENSAM Meknès)}{2022 -- Present}{Engineering Degree in Software \& Intelligent Systems (4th Year)}
+\entryhead{National School of Arts and Crafts Meknès (ENSAM Meknès)}{2022 -- Present}{Engineering Degree in Software \& Intelligent Systems}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt]
+  \item \textbf{2024 -- Present:} Engineering Cycle (4th Year Student)
+  \item \textbf{2022 -- 2024:} Integrated Preparatory Classes
+\end{itemize}
 
-\vspace{2pt}
+\vspace{4pt}
 
 \entryhead{Groupe Scolaire Atlas — Rabat}{2021 -- 2022}{2nd Year Baccalauréat in Physical Sciences — Mention Très Bien}
-
-\vspace{2pt}
-
-\entryhead{Groupe Scolaire Atlas — Rabat}{2020 -- 2021}{1st Year Baccalauréat in Experimental Sciences — Mention Très Bien}
 
 % ============================================================
 % EXPERIENCE
 % ============================================================
 \section{Professional Experience}
 
-\entryhead{ECS Informatique}{2024 · 1 month}{Software Engineering Intern}
+\entryhead{ECS Informatique}{2025 · 1 month}{Software Engineering Intern}
 \begin{itemize}[leftmargin=*, nosep, topsep=2pt]
-  \item Developed an enterprise web application for managing multi-criteria employee expense tracking and approval processes
-  \item Designed and implemented dynamic forms, role-based access control, and reporting dashboards
-  \item Collaborated with a team member on database schema design and RESTful API architecture
-  \item Technologies: ASP.NET, C\#, .NET Framework, SQL Server
+  \item Developed an enterprise web app for expense tracking using the MVC pattern, with RBAC and reporting.
+  \item Designed database schema and RESTful APIs using ASP.NET, C\#, and SQL Server.
 \end{itemize}
 
 % ============================================================
@@ -96,31 +106,24 @@
 % ============================================================
 \section{Projects}
 
-\textbf{ENSAM360 — Immersive 360° Virtual Tour} \\
-\textit{React, Node.js, Neo4j, Groq AI, Docker}
+\textbf{ENSAM360 — Immersive 360° Virtual Tour} \hfill \textit{React, Express, Neo4j, Leaflet, LangChain, Groq}
 \begin{itemize}[leftmargin=*, nosep, topsep=2pt]
-  \item Built a virtual tour platform enabling digital navigation of the ENSAM Meknès campus
-  \item Integrated an AI-powered chatbot to assist visitors during their virtual tour experience
-  \item Designed micro-services architecture orchestrated via Docker Compose
+  \item Built a virtual tour platform for ENSAM Meknès with an integrated AI-powered chatbot.
+  \item Designed a microservices architecture orchestrated via Docker Compose.
 \end{itemize}
 
 \vspace{4pt}
 
-\textbf{XPFit — Mobile Fitness Application} \\
-\textit{Flutter, Dart, SQLite, Google AI, Spoonacular API}
+\textbf{XPFit — Mobile Fitness Application} \hfill \textit{Flutter, Dart, SQLite, Spoonacular API}
 \begin{itemize}[leftmargin=*, nosep, topsep=2pt]
-  \item Developed a cross-platform mobile app with gamified exercise tracking and physical evolution system
-  \item Implemented weekly meal planning with nutrition guidance powered by Spoonacular API
-  \item Integrated an AI chatbot using Google Generative AI for personalized fitness advice
+  \item Developed a gamified fitness app with comprehensive nutrition tracking and personalized workout plans.
 \end{itemize}
 
 \vspace{4pt}
 
-\textbf{Chess Game — 2D Pixel Art} \\
-\textit{Godot Engine, GDScript, LibreSprite}
+\textbf{Chess Game — 2D Pixel Art} \hfill \textit{Godot Engine, GDScript, LibreSprite}
 \begin{itemize}[leftmargin=*, nosep, topsep=2pt]
-  \item Built a fully playable 2D chess game from scratch using the Godot game engine
-  \item Hand-crafted all chess piece sprites as pixel art using LibreSprite
+  \item Built a fully playable 2D chess game with custom pixel art assets using Godot.
 \end{itemize}
 
 % ============================================================
@@ -130,24 +133,34 @@
 
 \textbf{Languages:} Java, C\#, Dart, GDScript, JavaScript, Python, C++ \\
 \textbf{Frameworks:} Spring Boot, ASP.NET / .NET, Flutter, React, Node.js \\
-\textbf{Databases:} SQL Server, SQLite, Neo4j \\
-\textbf{Tools \& Platforms:} Git, Docker, Godot Engine, LibreSprite \\
-\textbf{Concepts:} Microservices, REST APIs, Software Architecture, Design Patterns
+\textbf{Tools \& Concepts:} Git, Docker, Godot, Microservices, REST APIs, Software Architecture
+
+% ============================================================
+% EXTRACURRICULAR ACTIVITIES
+% ============================================================
+\section{Extracurricular Activities}
+
+\textbf{Gadz'IT — ENSAM IT Club} \hfill \textit{Member, 2026 -- Present} \\
+Active member of the school's official IT club, participating in technical workshops.
+
+\vspace{2pt}
+
+\textbf{Techathon 2025 — Capgemini Engineering Morocco} \hfill \textit{National Semi-finalist} \\
+AI Innovation Challenge themed "Smarter Worlds with AI". Reached national semi-finals.
 
 % ============================================================
 % CERTIFICATIONS
 % ============================================================
 \section{Certifications}
 
-\textbf{Oracle Cloud Infrastructure (OCI)} \hfill Oracle
+\textbf{CS221: AI Principles \& Techniques} \hfill Stanford University \\
+\textbf{OCI Foundations} \hfill Oracle
 
 % ============================================================
 % LANGUAGES
 % ============================================================
 \section{Languages}
 
-\textbf{Arabic} — Native \quad $\cdot$ \quad
-\textbf{French} — Proficient \quad $\cdot$ \quad
-\textbf{English} — Proficient
+\textbf{Arabic} (Native) $\cdot$ \textbf{French} (Proficient) $\cdot$ \textbf{English} (Proficient)
 
 \end{document}

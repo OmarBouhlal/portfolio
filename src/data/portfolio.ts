@@ -9,7 +9,7 @@ export const personalInfo = {
   tagline:
     "Software & Intelligent Systems Engineering Student at ENSAM Meknès — passionate about the logic, reasoning, and architecture behind great software.",
   email: "omarbouhlal05@gmail.com",
-  resumeUrl: "cv_en.pdf",
+  resumeUrl: "cv_en_v2.pdf",
   socialLinks: {
     github: "https://github.com/OmarBouhlal",
     linkedin: "https://www.linkedin.com/in/omar-bouhlal-101ba6353",
@@ -41,7 +41,7 @@ export const experience: ExperienceEntry[] = [
       {
         title: "Software Engineering Intern",
         startDate: "",
-        endDate: "2024 · 1 month",
+        endDate: "2025 · 1 month",
       },
     ],
   },
@@ -64,7 +64,8 @@ export const education: EducationEntry[] = [
     startYear: "2022",
     endYear: "Present",
     highlights: [
-      { label: "4th Year Student" },
+      { label: "2024 – Present: Engineering Cycle (4th Year Student)" },
+      { label: "2022 – 2024: Integrated Preparatory Classes" },
     ],
   },
   {
@@ -72,15 +73,6 @@ export const education: EducationEntry[] = [
     degree: "2ème Année Baccalauréat — Sciences Physiques",
     startYear: "2021",
     endYear: "2022",
-    highlights: [
-      { label: "Mention Très Bien" },
-    ],
-  },
-  {
-    institution: "Groupe Scolaire Atlas — Rabat",
-    degree: "1ère Année Baccalauréat — Sciences Expérimentales",
-    startYear: "2020",
-    endYear: "2021",
     highlights: [
       { label: "Mention Très Bien" },
     ],
@@ -109,9 +101,9 @@ export const projectCategories: ProjectCategory[] = [
       {
         title: "ENSAM360",
         description:
-          "An immersive 360° virtual tour website for the ENSAM Meknès campus, enabling users to navigate the campus digitally. Features an AI-powered chatbot that assists visitors during their virtual tour experience. Built with a micro-services architecture orchestrated via Docker.",
+          "Immersive 360° virtual tour for ENSAM Meknès with an integrated AI chatbot. Built with microservices orchestrated via Docker.",
         repo: "https://github.com/khalil-nouisse/ENSAM360",
-        stack: ["React", "Node.js", "Neo4j", "Groq AI", "Docker"],
+        stack: ["React", "Express", "Neo4j", "Leaflet", "LangChain", "Groq", "Docker"],
         collaborator: {
           name: "Khalil Ait Nouisse",
           github: "https://github.com/khalil-nouisse",
@@ -120,21 +112,21 @@ export const projectCategories: ProjectCategory[] = [
       {
         title: "XPFit",
         description:
-          "A comprehensive mobile fitness application featuring gamified exercise tracking, weekly meal plans with nutrition guidance, an AI-powered chatbot, and a personalized physical evolution system.",
+          "Gamified mobile fitness app featuring comprehensive nutrition tracking, personalized workout plans, and progress monitoring.",
         repo: "https://github.com/OmarBouhlal/xpFit",
-        stack: ["Flutter", "Dart", "SQLite", "Google AI", "Spoonacular API"],
+        stack: ["Flutter", "Dart", "SQLite", "Spoonacular API"],
       },
       {
         title: "Social Media Platform",
         description:
-          "A social media platform currently in development, built with a microservices architecture for scalability and clean separation of concerns. Focused on robust backend design and inter-service communication.",
+          "Scalable social media platform built with microservices, focusing on robust backend design and inter-service communication.",
         repo: "",
         stack: ["Microservices", "In Progress"],
       },
       {
         title: "ECS Expense Management System",
         description:
-          "An enterprise web application built for ECS Informatique to streamline and manage multi-criteria employee expense tracking and approval processes. Features role-based access, dynamic forms, and reporting dashboards.",
+          "Enterprise web application using the MVC architectural design pattern to manage employee expense tracking with RBAC and reporting dashboards.",
         repo: "https://github.com/amineferdous/ECS_project",
         stack: ["ASP.NET", "C#", ".NET", "SQL Server"],
         collaborator: {
@@ -151,7 +143,7 @@ export const projectCategories: ProjectCategory[] = [
       {
         title: "Chess Game",
         description:
-          "A fully playable 2D chess game built from scratch with the Godot engine. All chess pieces were hand-crafted as pixel art using LibreSprite, giving the game a distinctive retro aesthetic.",
+          "Fully playable 2D chess game built with Godot, featuring custom-crafted pixel art assets and retro aesthetics.",
         repo: "https://github.com/OmarBouhlal/chess_game_with_godot",
         stack: ["Godot", "GDScript", "LibreSprite", "Pixel Art"],
       },
@@ -192,12 +184,51 @@ export const services: ServiceItem[] = [
   },
 ];
 
+export interface ExtracurricularEntry {
+  organization: string;
+  role: string;
+  startDate: string;
+  endDate: string;
+  description?: string;
+  highlights?: string[];
+}
+
+export const extracurricular: ExtracurricularEntry[] = [
+  {
+    organization: "Gadz'IT — ENSAM Meknès IT Club",
+    role: "Member",
+    startDate: "2026",
+    endDate: "Present",
+    description: "Active member of the school's official IT club, participating in technical workshops and collaborative projects.",
+  },
+  {
+    organization: "Techathon 2025 — Capgemini Engineering Morocco",
+    role: "National Semi-finalist",
+    startDate: "2025",
+    endDate: "2025",
+    description: "AI Innovation Challenge (ENSAM Network) themed 'Smarter Worlds with AI'. Developed an AI-driven solution as part of a team, reaching the national semi-finals.",
+  },
+];
+
+export const certifications = [
+  {
+    name: "CS221: AI Principles & Techniques",
+    issuer: "Stanford University",
+    year: "2025",
+  },
+  {
+    name: "Oracle Cloud Infrastructure (OCI)",
+    issuer: "Oracle",
+    year: "2024",
+  },
+];
+
 export const contactInfo = {
   heading: "Let's Keep in Touch",
   description:
     "Whether you want to collaborate on a project, ask a question, or just say hi — I'm just a message away.",
   email: "omarbouhlal05@gmail.com",
-  resumeUrl: "cv_en.pdf",
+  resumeUrl: "cv_en_v2.pdf",
 };
 
 export const footerInfo = {
