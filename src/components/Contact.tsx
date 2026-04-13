@@ -39,9 +39,20 @@ export default function Contact() {
                             className="contact-btn secondary"
                             target="_blank"
                             rel="noopener noreferrer"
+                            download
                         >
                             <HiOutlineDocumentArrowDown size={18} />
-                            Download resume (CV)
+                            Download CV (EN)
+                        </a>
+                        <a
+                            href={contactInfo.resumeUrlFr}
+                            className="contact-btn secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download
+                        >
+                            <HiOutlineDocumentArrowDown size={18} />
+                            Download CV (FR)
                         </a>
                     </div>
                     <div className="contact-socials">

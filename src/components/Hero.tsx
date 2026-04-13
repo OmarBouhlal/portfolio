@@ -48,13 +48,28 @@ export default function Hero() {
                             className="hero-cta secondary"
                             target="_blank"
                             rel="noopener noreferrer"
+                            download
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.8 }}
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
                         >
-                            Download CV
+                            CV (EN)
+                        </motion.a>
+                        <motion.a
+                            href={personalInfo.resumeUrlFr}
+                            className="hero-cta secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.85 }}
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.97 }}
+                        >
+                            CV (FR)
                         </motion.a>
                         <motion.a
                             href="#contact"
