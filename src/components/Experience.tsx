@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { experience, type ExperienceEntry } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
 import "./Experience.css";
 
 function ExperienceItem({
@@ -11,6 +12,13 @@ function ExperienceItem({
     index: number;
 }) {
     const [isOpen, setIsOpen] = useState(index === 0);
+    const { t } = useLanguage();
+
+    // Map English role titles to translation keys
+    const translateRole = (title: string) => {
+        if (title === "Software Engineering Intern") return t("experience_role_intern");
+        return title;
+    };
 
     return (
         <motion.div
@@ -49,7 +57,7 @@ function ExperienceItem({
                     >
                         {item.roles.map((role, ri) => (
                             <div className="experience-role" key={ri}>
-                                <span className="experience-role-title">{role.title}</span>
+                                <span className="experience-role-title">{translateRole(role.title)}</span>
                                 <span className="experience-role-dates">
                                     {role.startDate ? `${role.startDate} – ${role.endDate}` : role.endDate}
                                 </span>
@@ -63,6 +71,8 @@ function ExperienceItem({
 }
 
 export default function Experience() {
+    const { t } = useLanguage();
+
     return (
         <section className="experience section" id="experience">
             <div className="container">
@@ -73,7 +83,7 @@ export default function Experience() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5 }}
                 >
-                    Experience
+                    {t("experience_title")}
                 </motion.h2>
                 <div className="experience-list">
                     {experience.map((item, i) => (

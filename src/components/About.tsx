@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { aboutMe } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
 import "./About.css";
 
 export default function About() {
+    const { t } = useLanguage();
+
     return (
         <section className="about section" id="about">
             <div className="container">
@@ -13,7 +15,7 @@ export default function About() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5 }}
                 >
-                    About Me
+                    {t("about_title")}
                 </motion.h2>
                 <motion.div
                     className="about-text"
@@ -22,9 +24,8 @@ export default function About() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6, delay: 0.15 }}
                 >
-                    {aboutMe.paragraphs.map((p, i) => (
-                        <p key={i}>{p}</p>
-                    ))}
+                    <p>{t("about_p1")}</p>
+                    <p>{t("about_p2")}</p>
                 </motion.div>
             </div>
         </section>

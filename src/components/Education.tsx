@@ -1,9 +1,31 @@
 import { motion } from "framer-motion";
 import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
 import { education, personalInfo } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
 import "./Education.css";
 
+// Map data strings to translation keys for degree/highlight fields
+type EducationKey =
+    | "education_degree_ensam"
+    | "education_degree_bac"
+    | "education_highlight_cycle"
+    | "education_highlight_prep"
+    | "education_highlight_mention";
+
+const degreeMap: Record<string, EducationKey> = {
+    "Engineering Degree — Software & Intelligent Systems": "education_degree_ensam",
+    "2ème Année Baccalauréat — Sciences Physiques": "education_degree_bac",
+};
+
+const highlightMap: Record<string, EducationKey> = {
+    "2024 – Present: Engineering Cycle (4th Year Student)": "education_highlight_cycle",
+    "2022 – 2024: Integrated Preparatory Classes": "education_highlight_prep",
+    "Mention Très Bien": "education_highlight_mention",
+};
+
 export default function Education() {
+    const { t } = useLanguage();
+
     return (
         <section className="education section" id="education">
             <div className="container">
@@ -14,7 +36,7 @@ export default function Education() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5 }}
                 >
-                    Education
+                    {t("education_title")}
                 </motion.h2>
                 <div className="education-list">
                     {education.map((item, i) => (
@@ -44,11 +66,14 @@ export default function Education() {
                                     {item.startYear} – {item.endYear}
                                 </span>
                             </div>
-                            <p className="education-degree">{item.degree}</p>
+                            <p className="education-degree">
+                                {degreeMap[item.degree] ? t(degreeMap[item.degree]) : item.degree}
+                            </p>
                             {item.highlights && item.highlights.length > 0 && (
                                 <div className="education-highlights">
-                                    {item.highlights.map((h, hi) =>
-                                        h.url ? (
+                                    {item.highlights.map((h, hi) => {
+                                        const label = highlightMap[h.label] ? t(highlightMap[h.label]) : h.label;
+                                        return h.url ? (
                                             <a
                                                 key={hi}
                                                 href={h.url}
@@ -56,14 +81,14 @@ export default function Education() {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
-                                                {h.label}
+                                                {label}
                                             </a>
                                         ) : (
                                             <span key={hi} className="education-highlight">
-                                                {h.label}
+                                                {label}
                                             </span>
-                                        )
-                                    )}
+                                        );
+                                    })}
                                 </div>
                             )}
                         </motion.div>
@@ -82,7 +107,7 @@ export default function Education() {
                         rel="noopener noreferrer"
                     >
                         <HiOutlineDocumentArrowDown size={18} />
-                        Download full resume (CV)
+                        {t("education_download")}
                     </a>
                 </motion.div>
             </div>

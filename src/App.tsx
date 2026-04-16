@@ -1,3 +1,4 @@
+import { LanguageProvider } from "./context/LanguageContext";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -10,7 +11,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <>
+    <LanguageProvider>
       <Header />
       <main>
         <Hero />
@@ -22,6 +23,6 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </LanguageProvider>
   );
 }

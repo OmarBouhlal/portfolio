@@ -5,6 +5,7 @@ import {
     HiOutlinePuzzlePiece,
 } from "react-icons/hi2";
 import { projectCategories } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
 import "./Projects.css";
 
 const categoryIconMap: Record<string, React.ReactNode> = {
@@ -12,7 +13,25 @@ const categoryIconMap: Record<string, React.ReactNode> = {
     gamepad: <HiOutlinePuzzlePiece />,
 };
 
+// Map project titles to their translation keys
+type ProjectDescKey =
+    | "proj_ensam360_desc"
+    | "proj_xpfit_desc"
+    | "proj_social_desc"
+    | "proj_ecs_desc"
+    | "proj_chess_desc";
+
+const projectDescMap: Record<string, ProjectDescKey> = {
+    "ENSAM360": "proj_ensam360_desc",
+    "XPFit": "proj_xpfit_desc",
+    "Social Media Platform": "proj_social_desc",
+    "ECS Expense Management System": "proj_ecs_desc",
+    "Chess Game": "proj_chess_desc",
+};
+
 export default function Projects() {
+    const { t } = useLanguage();
+
     return (
         <section className="projects section" id="projects">
             <div className="container">
@@ -23,7 +42,7 @@ export default function Projects() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5 }}
                 >
-                    Projects
+                    {t("projects_title")}
                 </motion.h2>
 
                 {projectCategories.map((cat, ci) => (
@@ -65,7 +84,11 @@ export default function Projects() {
                                             </a>
                                         )}
                                     </div>
-                                    <p className="project-desc">{project.description}</p>
+                                    <p className="project-desc">
+                                        {projectDescMap[project.title]
+                                            ? t(projectDescMap[project.title])
+                                            : project.description}
+                                    </p>
                                     <div className="project-meta">
                                         <div className="project-stack">
                                             {project.stack.map((tech, ti) => (
@@ -76,7 +99,7 @@ export default function Projects() {
                                         </div>
                                         {project.collaborator && (
                                             <span className="project-collaborator">
-                                                with{" "}
+                                                {t("projects_with")}{" "}
                                                 <a
                                                     href={project.collaborator.github}
                                                     target="_blank"

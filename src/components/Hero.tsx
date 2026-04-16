@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { HiArrowRight } from "react-icons/hi";
 import { personalInfo } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
 import "./Hero.css";
 
 export default function Hero() {
+    const { t } = useLanguage();
+
     return (
         <section className="hero" id="hero">
             <div className="hero-content">
@@ -14,7 +17,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        {personalInfo.greeting}
+                        {t("hero_greeting")}
                     </motion.p>
                     <motion.h1
                         className="hero-name"
@@ -24,23 +27,13 @@ export default function Hero() {
                     >
                         {personalInfo.name}
                     </motion.h1>
-                    {personalInfo.pronunciation && (
-                        <motion.p
-                            className="hero-pronunciation"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.6 }}
-                        >
-                            {personalInfo.pronunciation}
-                        </motion.p>
-                    )}
                     <motion.p
                         className="hero-tagline"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.55 }}
                     >
-                        {personalInfo.tagline}
+                        {t("hero_tagline")}
                     </motion.p>
                     <div className="hero-actions">
                         <motion.a
@@ -55,7 +48,7 @@ export default function Hero() {
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
                         >
-                            CV (EN)
+                            {t("hero_cv_en")}
                         </motion.a>
                         <motion.a
                             href={personalInfo.resumeUrlFr}
@@ -69,7 +62,7 @@ export default function Hero() {
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
                         >
-                            CV (FR)
+                            {t("hero_cv_fr")}
                         </motion.a>
                         <motion.a
                             href="#contact"
@@ -80,7 +73,7 @@ export default function Hero() {
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
                         >
-                            Let's connect <HiArrowRight />
+                            {t("hero_cta_contact")} <HiArrowRight />
                         </motion.a>
                         <motion.span
                             className="hero-badge"
@@ -88,7 +81,7 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.9 }}
                         >
-                            🔍 Seeking an Internship as a Backend Developer for Summer 2026
+                            {t("hero_badge")}
                         </motion.span>
                     </div>
                 </div>

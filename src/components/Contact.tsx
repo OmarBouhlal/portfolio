@@ -5,9 +5,12 @@ import {
 } from "react-icons/hi2";
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { contactInfo, personalInfo } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
 import "./Contact.css";
 
 export default function Contact() {
+    const { t } = useLanguage();
+
     return (
         <section className="contact section" id="contact">
             <div className="container">
@@ -18,7 +21,7 @@ export default function Contact() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5 }}
                 >
-                    Contact
+                    {t("contact_title")}
                 </motion.h2>
                 <motion.div
                     className="contact-content"
@@ -27,12 +30,12 @@ export default function Contact() {
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 0.55, delay: 0.1 }}
                 >
-                    <h3 className="contact-heading">{contactInfo.heading}</h3>
-                    <p className="contact-desc">{contactInfo.description}</p>
+                    <h3 className="contact-heading">{t("contact_heading")}</h3>
+                    <p className="contact-desc">{t("contact_desc")}</p>
                     <div className="contact-actions">
                         <a href={`mailto:${contactInfo.email}`} className="contact-btn primary">
                             <HiOutlineEnvelope size={18} />
-                            Contact me
+                            {t("contact_btn_email")}
                         </a>
                         <a
                             href={contactInfo.resumeUrl}
@@ -42,7 +45,7 @@ export default function Contact() {
                             download
                         >
                             <HiOutlineDocumentArrowDown size={18} />
-                            Download CV (EN)
+                            {t("contact_btn_cv_en")}
                         </a>
                         <a
                             href={contactInfo.resumeUrlFr}
@@ -52,7 +55,7 @@ export default function Contact() {
                             download
                         >
                             <HiOutlineDocumentArrowDown size={18} />
-                            Download CV (FR)
+                            {t("contact_btn_cv_fr")}
                         </a>
                     </div>
                     <div className="contact-socials">
