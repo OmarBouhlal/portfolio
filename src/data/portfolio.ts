@@ -3,7 +3,7 @@
 // ============================================================
 
 export const personalInfo = {
-  greeting: "👋🏼 Hello, I'm",
+  greeting: "Hello, I'm",
   name: "Omar Bouhlal",
   pronunciation: "",
   tagline:

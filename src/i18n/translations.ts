@@ -15,7 +15,7 @@ const translations = {
         nav_contact: "Contact",
 
         // Hero
-        hero_greeting: "👋🏼 Hello, I'm",
+        hero_greeting: "Hello, I'm",
         hero_tagline:
             "Software & Intelligent Systems Engineering Student at ENSAM Meknès — passionate about the logic, reasoning, and architecture behind great software.",
         hero_cta_contact: "Let's connect",
@@ -95,7 +95,7 @@ const translations = {
         nav_contact: "Contact",
 
         // Hero
-        hero_greeting: "👋🏼 Bonjour, je suis",
+        hero_greeting: "Bonjour, je suis",
         hero_tagline:
             "Étudiant ingénieur en Logiciels & Systèmes Intelligents à l'ENSAM Meknès — passionné par la logique, le raisonnement et l'architecture derrière les grands logiciels.",
         hero_cta_contact: "Entrer en contact",
