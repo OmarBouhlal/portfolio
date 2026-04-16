@@ -9,8 +9,8 @@ export const personalInfo = {
   tagline:
     "Software & Intelligent Systems Engineering Student at ENSAM Meknès — passionate about the logic, reasoning, and architecture behind great software.",
   email: "omarbouhlal05@gmail.com",
-  resumeUrl: "CV/cv_en-5.pdf",
-  resumeUrlFr: "CV/cv_fr-8.pdf",
+  resumeUrl: "cv_en-5.pdf",
+  resumeUrlFr: "cv_fr-8.pdf",
   socialLinks: {
     github: "https://github.com/OmarBouhlal",
     linkedin: "https://www.linkedin.com/in/omar-bouhlal-101ba6353",
@@ -229,8 +229,8 @@ export const contactInfo = {
   description:
     "Whether you want to collaborate on a project, ask a question, or just say hi — I'm just a message away.",
   email: "omarbouhlal05@gmail.com",
-  resumeUrl: "CV/cv_en-5.pdf",
-  resumeUrlFr: "CV/cv_fr-8.pdf",
+  resumeUrl: "cv_en-5.pdf",
+  resumeUrlFr: "cv_fr-8.pdf",
 };
 
 export const footerInfo = {
