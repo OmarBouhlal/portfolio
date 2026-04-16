@@ -82,7 +82,7 @@ const translations = {
         contact_btn_cv_fr: "Download CV (FR)",
 
         // Footer
-        footer_tagline: "Designed & built by Omar Bouhlal",
+        footer_tagline: "© 2026 Omar Bouhlal | All rights reserved.",
     },
 
     fr: {
@@ -162,7 +162,7 @@ const translations = {
         contact_btn_cv_fr: "Télécharger CV (FR)",
 
         // Footer
-        footer_tagline: "Conçu & développé par Omar Bouhlal",
+        footer_tagline: "© 2026 Omar Bouhlal | Tous droits réservés.",
     },
 } as const;
 
